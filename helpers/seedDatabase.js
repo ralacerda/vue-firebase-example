@@ -3,19 +3,26 @@ import { auth, firestore } from './initialize.js';
 import users from './users.js';
 
 function seedUsers() {
-  users.forEach((user) => {
-    auth.createUser(user);
+  users.forEach(async (user) => {
+    try {
+      await auth.createUser(user);
+    } catch (error) {
+      if (error instanceof Error) {
+        console.warn('error creating user: ', error.message);
+      } else {
+        console.warn('error creating user: ', error);
+      }
+    }
   });
 }
 
-seedUsers();
 function createFakeDoc() {
   const numberOfFounders = faker.number.int({ min: 1, max: 5 });
 
   return {
     name: faker.company.name(),
     email: faker.company.catchPhrase(),
-    avaliation: faker.finance.amount({ min: 10000, max: 1000000000, symbol: '$' }),
+    evaluation: faker.finance.amount({ min: 10000, max: 1000000000, symbol: '$' }),
     stockPrice: faker.number.float({ min: 0, max: 500 }),
     employees: faker.number.int({ min: 5, max: 500 }),
     color: faker.color.rgb(),
@@ -37,3 +44,4 @@ function seedData() {
 }
 
 seedData();
+seedUsers();
