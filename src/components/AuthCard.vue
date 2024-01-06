@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 const currentUser = useCurrentUser();
 const auth = useFirebaseAuth()!;
 
-const loginPassword = ref<string>('');
+const loginPassword = ref<string>('password');
 const loginUser = ref('paul@beatles.com');
 const loginError = ref<string>();
 
