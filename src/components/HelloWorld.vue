@@ -3,6 +3,7 @@
     <h1>Vue & Firebase Playground Template</h1>
     <div class="cards">
       <PiniaCard />
+      <AuthCard />
     </div>
   </main>
 </template>
