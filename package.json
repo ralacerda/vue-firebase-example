@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "run-p -l dev:*",
     "dev:vite": "vite",
-    "dev:emulators": "firebase emulators:start --project=\"demo-playground\"",
-    "dev:functions": "pnpm run -C functions build:watch",
+    "dev:emulatores": "run-p -l emulators functions",
+    "emulators": "firebase emulators:start --project=\"demo-playground\"",
+    "functions": "pnpm run -C functions build:watch",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
