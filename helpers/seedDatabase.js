@@ -19,13 +19,21 @@ function seedUsers() {
 function createFakeDoc() {
   const numberOfFounders = faker.number.int({ min: 1, max: 5 });
 
+  const randomHue = Math.floor(Math.random() * 360);
+  const randomSaturation = Math.floor(Math.random() * (90 - 20 + 1)) + 20;
+  const randomLightness = Math.floor(Math.random() * (80 - 60 + 1)) + 60;
+
   return {
     name: faker.company.name(),
     email: faker.company.catchPhrase(),
     evaluation: faker.finance.amount({ min: 10000, max: 1000000000, symbol: '$' }),
     stockPrice: faker.number.float({ min: 0, max: 500 }),
     employees: faker.number.int({ min: 5, max: 500 }),
-    color: faker.color.rgb(),
+    color: {
+      hue: randomHue,
+      saturation: randomSaturation,
+      lightness: randomLightness,
+    },
     foundDate: faker.date.past({ years: 60 }),
     evil: faker.datatype.boolean(0.2),
     description: faker.lorem.paragraphs(3),
