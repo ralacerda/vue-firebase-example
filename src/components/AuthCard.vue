@@ -14,6 +14,7 @@ const users = ['paul@beatles.com', 'john@beatles.com', 'george@beatles.com', 'ri
 
 async function login() {
   try {
+    loginError.value = undefined;
     await signInWithEmailAndPassword(auth, loginUser.value, loginPassword.value);
   } catch (error) {
     if (error instanceof Error) {
