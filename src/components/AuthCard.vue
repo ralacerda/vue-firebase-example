@@ -4,6 +4,9 @@ import { useCurrentUser, useFirebaseAuth } from 'vuefire';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 
 const currentUser = useCurrentUser();
+
+// Here we use the non-null assertion operator because auth is null on server side.
+// https://vuefire.vuejs.org/guide/auth.html#Auth-instance
 const auth = useFirebaseAuth()!;
 
 const loginPassword = ref<string>('password');
