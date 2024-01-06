@@ -31,7 +31,7 @@ function logout() {
   <BaseCard>
     <template #title> <LockIcon style="color: #fcc727" /> Vuefire Auth </template>
     <template v-if="currentUser">
-      <p>Logged in as {{ loginUser }}</p>
+      <p>Logged in as {{ currentUser.displayName }}</p>
       <img v-if="currentUser.photoURL" :src="currentUser.photoURL" class="userPhoto" />
       <button @click="logout">Logout</button>
     </template>
@@ -55,5 +55,9 @@ function logout() {
   border-radius: 50%;
   border: 2px solid var(--color-itens);
   margin-inline: auto;
+}
+
+.login-error {
+  color: rgb(228, 93, 93);
 }
 </style>
