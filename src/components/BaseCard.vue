@@ -1,3 +1,9 @@
+<script setup lang="ts">
+const props = defineProps<{
+  width?: string;
+}>();
+</script>
+
 <template>
   <div class="card">
     <h2><slot name="title" /></h2>
@@ -14,7 +20,7 @@
   border-radius: 1rem;
   background-color: var(--color-background-soft);
   border: 1px solid var(--color-itens);
-  width: 300px;
+  width: v-bind('props.width || "300px"');
   text-align: center;
 }
 </style>
