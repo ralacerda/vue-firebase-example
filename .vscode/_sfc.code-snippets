@@ -1,0 +1,38 @@
+{
+  "veb-sfc": {
+    "scope": "vue",
+    "prefix": "sfc",
+    "body": [
+      "<script setup lang='ts'>",
+      "${0}",
+      "</script>",
+      "",
+      "<template>",
+      "\t",
+      "</template>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Single File Component (Comp API + TS) from VEB"
+  },
+  "veb-script": {
+    "scope": "vue",
+    "prefix": "script",
+    "body": ["<script setup lang='ts'>", "${0}", "</script>"],
+    "description": "Script block (Comp API + TS)"
+  },
+  "veb-template": {
+    "scope": "vue",
+    "prefix": "template",
+    "body": ["<template>", "\t${0}", "</template>"],
+    "description": "Template block"
+  },
+  "veb-style": {
+    "scope": "vue",
+    "prefix": "style",
+    "body": ["<style lang=\"scss\" scoped>", "${0}", "</style>"],
+    "description": "Scoped CSS + Sass styles block from VEB"
+  }
+}
