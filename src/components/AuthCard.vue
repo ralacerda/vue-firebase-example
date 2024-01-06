@@ -30,7 +30,7 @@ function logout() {
 
 <template>
   <BaseCard>
-    <template #title> <LockIcon style="color: #fcc727" /> Vuefire Auth </template>
+    <template #title> <LockIcon style="color: #fcc727" /> Firebase Auth </template>
     <template v-if="currentUser">
       <p>Logged in as {{ currentUser.displayName }}</p>
       <img v-if="currentUser.photoURL" :src="currentUser.photoURL" class="userPhoto" />
