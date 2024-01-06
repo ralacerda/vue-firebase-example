@@ -26,9 +26,9 @@ function createFakeDoc() {
   return {
     name: faker.company.name(),
     email: faker.company.catchPhrase(),
-    evaluation: faker.finance.amount({ min: 10000, max: 1000000000, symbol: '$' }),
-    stockPrice: faker.number.float({ min: 0, max: 500 }),
-    employees: faker.number.int({ min: 5, max: 500 }),
+    evaluation: faker.number.float({ min: 0, max: 1_000_000 }),
+    stockPrice: faker.finance.amount({ min: 0, max: 500, symbol: '$' }),
+    employees: faker.number.int({ min: 1, max: 10_000 }),
     color: {
       hue: randomHue,
       saturation: randomSaturation,
@@ -45,7 +45,7 @@ function createFakeDoc() {
 function seedData() {
   try {
     const eventsRef = firestore.collection('companies');
-    [...Array(50)].forEach(() => eventsRef.add(createFakeDoc()));
+    [...Array(20)].forEach(() => eventsRef.add(createFakeDoc()));
   } catch (error) {
     console.log(error, 'database seed failed');
   }
