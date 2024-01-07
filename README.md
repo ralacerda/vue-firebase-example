@@ -1,4 +1,10 @@
+<div align="center">
+
 # Vue & Firebase Example
+
+![Screenshot][screenshot]
+
+</div>
 
 I wrote this project to showcase how to:
 - Run firebase emulators without a firebase project
@@ -51,3 +57,5 @@ Simple javascript script (I couldn't get `ts-node` to run it) that will seed cre
 ## Vuefire
 
 This repository shows how easy it's to set up vuefire to display realtime data and deal with user authentication.
+
+[screenshot]: screenshot.webp
