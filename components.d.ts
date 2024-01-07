@@ -7,6 +7,9 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AuthCard: typeof import('./src/components/AuthCard.vue')['default']
+    BaseCard: typeof import('./src/components/BaseCard.vue')['default']
+    FirestoreCard: typeof import('./src/components/FirestoreCard.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
