@@ -12,8 +12,7 @@ export default defineConfig({
   plugins: [
     Vue(),
     AutoImport({
-      dirs: ['./src/composables', './src/utils', './src/stores'],
-      imports: ['vue', '@vueuse/core', 'vitest', 'vue-router'],
+      imports: ['vue'],
     }),
     Components(),
     Icons({ compiler: 'vue3' }),
