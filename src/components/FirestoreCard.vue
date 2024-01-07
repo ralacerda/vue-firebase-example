@@ -34,7 +34,7 @@ const dateFormater = new Intl.DateTimeFormat(undefined, {
 <template>
   <BaseCard width="400px">
     <template #title> <FireIcon style="color: #f78200" /> Firestore </template>
-    <p>Top 3 Random Companies</p>
+    <p>Top 3 Fake Companies</p>
     <div class="sort-form">
       <small>Sort by</small>
       <select v-model="sortOption">
