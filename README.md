@@ -24,7 +24,7 @@ cd vue-firebase-example
 Install dependencies using `pnpm`.
 
 > [!TIP]
-> If you don't have `pnpm` installed, you can run `corepack enable` to use the `pnpm` without needing to install it.
+> If you don't have `pnpm` installed, you can run `corepack enable` to use `pnpm` without needing to install it.
 
 ```bash
 pnpm i
@@ -35,12 +35,12 @@ Start the firebase emulators.
 pnpm dev:emulators
 ```
 
-> ![!WARNING]
+> [!WARNING]
 > Firebase Emulators requires the following:
 > - Node.js version 16.0 or higher
 > - Java JDK version 11 or higher
 
-After you see the sucess message that the emulators are ready, *in a new terminal*, run the following script to seed the database:
+After you see the sucess message that the emulators are ready, **in a new terminal**, run the following script to seed the database:
 ```bash
 pnpm seed
 ```
