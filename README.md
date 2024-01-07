@@ -1,10 +1,10 @@
 # Vue & Firebase Example
 
 I wrote this project to showcase how to:
-    - Run firebase emulators without a firebase project
-    - Build functions in watch mode with emulators for hot reloading 
-    - Create a script to populate the Auth and Firestore emulators with fake data
-    - How to use vuefire and firebase to display firestore data and deal with user authentication
+- Run firebase emulators without a firebase project
+- Build functions in watch mode with emulators for hot reloading 
+- Create a script to populate the Auth and Firestore emulators with fake data
+- How to use vuefire and firebase to display firestore data and deal with user authentication
 
 ## How to Use
 
