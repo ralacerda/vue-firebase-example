@@ -3,7 +3,7 @@ import CloudIcon from '~icons/mdi/cloud';
 import { getFunctions, httpsCallable } from 'firebase/functions';
 
 const functions = getFunctions();
-const number = ref(1);
+const number = ref(5);
 const result = ref();
 const running = ref(false);
 
