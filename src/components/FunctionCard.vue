@@ -18,6 +18,7 @@ const choosenOperation = ref('getSquared');
 
 async function calculate() {
   running.value = true;
+  result.value = undefined;
   const operationCloudFunction = httpsCallable(functions, choosenOperation.value);
   const response = await operationCloudFunction({ number: number.value });
   running.value = false;
@@ -40,7 +41,7 @@ async function calculate() {
     <div v-if="result !== undefined && !running">
       <div class="result">{{ result }}</div>
     </div>
-    <div v-if="running || result === undefined">
+    <div v-if="running && result === undefined">
       <small>Calculating...</small>
     </div>
   </BaseCard>
