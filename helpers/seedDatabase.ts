@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { auth, firestore } from './initialize.js';
-import users from './users.js';
+import { auth, firestore } from './initialize';
+import users from './users';
 
 function seedUsers() {
   users.forEach(async (user) => {

@@ -60,7 +60,7 @@ Written in Typescript, are build in watch mode with the `dev:emulators` command
 
 ## Seed Script
 
-Simple javascript script (I couldn't get `ts-node` to run it) that will seed create user for each of the Beatles member and seed the Firestore with fake companies created using Fakerjs.
+Simple script that will seed create user for each of the Beatles member and seed the Firestore with fake companies created using Fakerjs.
 
 ## Vuefire
 
