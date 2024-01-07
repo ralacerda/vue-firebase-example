@@ -21,7 +21,10 @@ git clone https://github.com/ralacerda/vue-firebase-example.git
 cd vue-firebase-example
 ```
 
-Install dependencies using `pnpm`. If you don't have `pnpm`installed, try running `corepack enable` or follow the [official installing instructions](https://pnpm.io/installation).
+Install dependencies using `pnpm`.
+
+> [!TIP]
+> If you don't have `pnpm` installed, you can run `corepack enable` to use the `pnpm` without needing to install it.
 
 ```bash
 pnpm i
