@@ -12,7 +12,7 @@ Clone the Repository
 
 ```bash
 git clone https://github.com/ralacerda/vue-firebase-example.git
-cd vue3-firebase-example
+cd vue-firebase-example
 ```
 
 Install dependencies using `pnpm`. If you don't have `pnpm`installed, try running `corepack enable` or follow the [official installing instructions](https://pnpm.io/installation).
