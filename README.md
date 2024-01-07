@@ -30,10 +30,15 @@ Install dependencies using `pnpm`.
 pnpm i
 ```
 
-Start the firebase emulators. Note that you need Node.js version 16.0 or higher and Java JDK version 11 or higher.
+Start the firebase emulators.
 ```bash
 pnpm dev:emulators
 ```
+
+> ![!WARNING]
+> Firebase Emulators requires the following:
+> - Node.js version 16.0 or higher
+> - Java JDK version 11 or higher
 
 After you see the sucess message that the emulators are ready, *in a new terminal*, run the following script to seed the database:
 ```bash
