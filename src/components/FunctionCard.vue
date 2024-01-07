@@ -5,6 +5,7 @@ import { getFunctions, httpsCallable } from 'firebase/functions';
 const functions = getFunctions();
 const number = ref(1);
 const result = ref();
+const running = ref(false);
 
 const operations = [
   { name: 'Get squared value', value: 'getSquared' },
@@ -16,8 +17,10 @@ const operations = [
 const choosenOperation = ref('getSquared');
 
 async function calculate() {
+  running.value = true;
   const operationCloudFunction = httpsCallable(functions, choosenOperation.value);
   const response = await operationCloudFunction({ number: number.value });
+  running.value = false;
   result.value = response.data;
 }
 </script>
@@ -33,9 +36,12 @@ async function calculate() {
     </select>
     <input v-model="number" type="number" />
     <button @click="calculate">Calculate</button>
-    <div v-if="result">
-      <small>Result</small>
+    <small>Result</small>
+    <div v-if="result !== undefined && !running">
       <div class="result">{{ result }}</div>
+    </div>
+    <div v-if="running || result === undefined">
+      <small>Calculating...</small>
     </div>
   </BaseCard>
 </template>
