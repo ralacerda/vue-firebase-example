@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Vue & Firebase Playground Template</h1>
+    <h1>Vue & Firebase Example</h1>
     <div class="cards">
       <AuthCard />
       <FirestoreCard />
