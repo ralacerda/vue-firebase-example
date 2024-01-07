@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev:vite": "vite",
-    "dev:emulatores": "run-p -l emulators functions",
+    "dev:emulators": "run-p -l emulators functions",
     "emulators": "firebase emulators:start --project=\"demo-playground\"",
     "functions": "pnpm run -C functions build:watch",
     "build": "run-p type-check \"build-only {@}\" --",
