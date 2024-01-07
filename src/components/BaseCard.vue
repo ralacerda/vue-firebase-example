@@ -23,4 +23,11 @@ const props = defineProps<{
   width: v-bind('props.width || "300px"');
   text-align: center;
 }
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
 </style>

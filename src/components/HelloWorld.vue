@@ -2,8 +2,9 @@
   <main>
     <h1>Vue & Firebase Example</h1>
     <div class="cards">
-      <AuthCard />
       <FirestoreCard />
+      <AuthCard />
+      <FunctionCard />
     </div>
   </main>
 </template>
